@@ -17,6 +17,6 @@ if($method === "POST") {
         
         $resultado = calcularPropina($cuentaSinPropina, $porcentajePropina);
         
-        echo "El total a pagar con la propina incluida es de $" . $resultado + $cuentaSinPropina . " pesos, la propina son $" . $resultado . " pesos.";
+        echo "El total a pagar con la propina incluida es de $" . $resultado + $cuentaSinPropina . " pesos, la propina es de $" . $resultado . " pesos.";
     }
 }

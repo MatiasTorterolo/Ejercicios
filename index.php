@@ -135,7 +135,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                 <label for="porcentajePropina">Porcentaje para propina:</label>
                 <input type="number" id="porcentajePropina" name="porcentajePropina" placeholder="Porcentaje...">
                 
-                <br> 
+                <br> <br> 
                 
                 <input type="submit" value="CALCULAR"> 
                
@@ -147,11 +147,38 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
         <div class="Ejercicio 8">
             <div class="text-center bg-primary text-white p-3 rounded shadow">Ejercicio 8</div>
             
-            <p></p>
+            <p class="text-center">Crear un programa que permita convertir una cantidad de dinero de una moneda a otra. El programa debe solicitar al usuario el monto a convertir, la moneda de origen y la moneda de destino, y mostrar el resultado de la conversión.</p>
             
-            <form action="" method="">
+            <form action="ej8.php" method="POST" class="text-center">
                 
-               
+                <label for="monedaActual">Desde la divisa:</label>
+                <select id="monedaActual" name="monedaActual">
+                    <option value="AR">AR</option>
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="BRL">BRL</option>
+                    <option value="CLP">CLP</option>
+                </select>
+                
+                <br> <br> 
+                
+                <label for="monedaConvertir">Hasta la divisa:</label>
+                <select id="monedaConvertir" name="monedaConvertir">
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="AR">AR</option>
+                    <option value="BRL">BRL</option>
+                    <option value="CLP">CLP</option>
+                </select>
+                
+                <br> <br>
+
+                <label for="monto">Monto:</label>
+                <input type="number" id="monto" name="monto" placeholder="Indique el monto a convertir...">
+                
+                <br> <br>
+                
+                <input type="submit" value="CONVERTIR">
                 
             </form>
         </div>
@@ -161,7 +188,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
         <div class="Ejercicio 9">
             <div class="text-center bg-primary text-white p-3 rounded shadow">Ejercicio 9</div>
             
-            <p></p>
+            <p class="text-center">Desarrollar un programa que genere contraseñas seguras. El programa debe permitir al usuario especificar la longitud y los criterios de la contraseña (mayúsculas, minúsculas, números, caracteres especiales) y generar una contraseña aleatoria.</p>
             
             <form action="" method="">
                 
