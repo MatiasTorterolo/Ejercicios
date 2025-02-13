@@ -190,9 +190,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
             
             <p class="text-center">Desarrollar un programa que genere contraseñas seguras. El programa debe permitir al usuario especificar la longitud y los criterios de la contraseña (mayúsculas, minúsculas, números, caracteres especiales) y generar una contraseña aleatoria.</p>
             
-            <form action="" method="">
+            <form action="ej9.php" method="GET" class="text-center">
                 
-               
+               <input type="submit" value="GENERAR CONTRASEÑA">
                 
             </form>
         </div>
@@ -202,16 +202,24 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
         <div class="Ejercicio 10">
             <div class="text-center bg-primary text-white p-3 rounded shadow">Ejercicio 10</div>
             
-            <p></p>
+            <p class="text-center">Desarrolla un programa que calcule el índice de masa corporal (IMC) de una persona. El programa debe solicitar al usuario su peso y altura, y mostrar el resultado del cálculo del IMC, tanto en forma numérica como visual.</p>
             
-            <form action="" method="">
+            <form action="ej10.php" method="POST" class="text-center">
                 
-               
+                <label for="altura">Altura en centimetros:</label>
+                <input type="number" id="altura" name="altura" placeholder="Indique su altura...">
                 
+                <br> <br>
+                
+                <label for="peso">Peso en kilogramos:</label>
+                <input type="number" id="peso" name="peso" placeholder="Indique su peso...">
+                
+                <br> <br>
+                
+                <input type="submit" value="Calcular IMC">
+ 
             </form>
         </div>
-        
-        <br> <br> <br>
-        
+        <br> <br> <br> <br> <br> <br> <br> <br>
     </body>
 </html>
