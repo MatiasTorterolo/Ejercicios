@@ -15,6 +15,10 @@ body{
     
 }
 
+div > * {
+    margin-bottom: 20px;
+}
+
 .navbar{
     
     position: sticky;
@@ -36,15 +40,6 @@ body{
 .logo{
     
     color: whitesmoke;
-}
-
-.nav-links{
-    
-    list-style: none;
-    display: flex;  /* Asegura que los elementos estén en horizontal */
-    align-items: center; /* Alinea los elementos verticalmente */
-    padding: 0;
-    
 }
 
 .input{

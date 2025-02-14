@@ -17,17 +17,17 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
             <div class="logo">Ejercicios Rubicom <3</div>
             
             <select id="ejercicios" name="ejercicios">
-                <option value="" disabled selected>Ejercicios</option>
-                <option>Ejercicio 1</option>
-                <option>Ejercicio 2</option>
-                <option>Ejercicio 3</option>
-                <option>Ejercicio 4</option>
-                <option>Ejercicio 5</option>
-                <option>Ejercicio 6</option>
-                <option>Ejercicio 7</option>
-                <option>Ejercicio 8</option>
-                <option>Ejercicio 9</option>
-                <option>Ejercicio 10</option>
+                <option value="" disabled selected>Ejercicios</option> <!-- aca voy a tener que usar js para usar scrollIntoView() -->
+                <option value="ejercicio1">Ejercicio 1</option>
+                <option value="ejercicio2">Ejercicio 2</option>
+                <option value="ejercicio3">Ejercicio 3</option>
+                <option value="ejercicio4">Ejercicio 4</option>
+                <option value="ejercicio5">Ejercicio 5</option>
+                <option value="ejercicio6">Ejercicio 6</option>
+                <option value="ejercicio7">Ejercicio 7</option>
+                <option value="ejercicio8">Ejercicio 8</option>
+                <option value="ejercicio9">Ejercicio 9</option>
+                <option value="ejercicio10">Ejercicio 10</option>
             </select>
             
         </nav>
@@ -35,7 +35,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
         <div class="Ejercicio 1">
             <div class="text-center bg-primary text-white p-3 rounded shadow">Ejercicio 1</div>
             
-            <p>Indique un número y se hara una sumatoria de todos los números pares desde 1 hasta el número elegido.</p>
+            <section id="ejercicio1">Indique un número y se hara una sumatoria de todos los números pares desde 1 hasta el número elegido.</section>
             
             <form action="ej1.php" method="POST">
                 
@@ -52,9 +52,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
         <br> <br> <br>
         
         <div class="Ejercicio 2">
+            
             <div class="text-center bg-primary text-white p-3 rounded shadow">Ejercicio 2</div>
             
-            <p>Indique un número entero y se le calculará su factorial.</p>
+            <section id="ejercicio2">Indique un número entero y se le calculará su factorial.</section>
             
             <form action="ej2.php" method="POST">
                 
@@ -72,7 +73,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
         <div class="Ejercicio 3">
             <div class="text-center bg-primary text-white p-3 rounded shadow">Ejercicio 3</div>
             
-            <p>Indique un número del 1 al 100 y se indicará si es un número primo o no.</p>
+            <section id="ejercicio3">Indique un número del 1 al 100 y se indicará si es un número primo o no.</section>
             
             <form action="ej3.php" method="POST">
                 
@@ -89,7 +90,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
         <div class="Ejercicio 4">
             <div class="text-center bg-primary text-white p-3 rounded shadow">Ejercicio 4</div>
             
-            <p>Ingrese una cantidad de metros y se hara una conversión a lo que decida.</p>
+            <section id="ejercicio4">Ingrese una cantidad de metros y se hara una conversión a lo que decida.</section>
             
             <form action="ej4.php" method="POST">
                 
@@ -114,7 +115,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
         <div class="Ejercicio 5">
             <div class="text-center bg-primary text-white p-3 rounded shadow">Ejercicio 5</div>
             
-            <p>Elegir un número, si esta en la lista se mostrará la posición en la que está.</p>
+            <section id="ejercicio5">Elegir un número, si esta en la lista se mostrará la posición en la que está.</section>
             
             <form action="ej5.php" method="POST">
                 
@@ -130,7 +131,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
         <div class="Ejercicio 6">
             <div class="text-center bg-primary text-white p-3 rounded shadow">Ejercicio 6</div>
             
-            <p>Crear un algorítmo en donde todos los números del 1 al 100 que se los multiplique por 5 y se lo divida por 7, si su resto es menor o igual a 3, se mostraran y los números que hayan cumplido los requisitos seran agregados a un arreglo.</p>
+            <section id="ejercicio6">Crear un algorítmo en donde todos los números del 1 al 100 que se los multiplique por 5 y se lo divida por 7, si su resto es menor o igual a 3, se mostraran y los números que hayan cumplido los requisitos seran agregados a un arreglo.</section>
             
             <form action="ej6.php" method="GET">
                 
@@ -144,7 +145,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
         <div class="Ejercicio 7">
             <div class="text-center bg-primary text-white p-3 rounded shadow">Ejercicio 7</div>
             
-            <p class="text-center">Calcular el monto de propina a dejar en un restaurante. El programa debe solicitar al usuario el monto total de la cuenta y el porcentaje de propina deseado, y calcular el monto total a pagar.</p>
+            <section id="ejercicio7">Calcular el monto de propina a dejar en un restaurante. El programa debe solicitar al usuario el monto total de la cuenta y el porcentaje de propina deseado, y calcular el monto total a pagar.</section>
             
             <form action="ej7.php" method="POST" class="text-center">
                 
@@ -169,7 +170,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
         <div class="Ejercicio 8">
             <div class="text-center bg-primary text-white p-3 rounded shadow">Ejercicio 8</div>
             
-            <p class="text-center">Crear un programa que permita convertir una cantidad de dinero de una moneda a otra. El programa debe solicitar al usuario el monto a convertir, la moneda de origen y la moneda de destino, y mostrar el resultado de la conversión.</p>
+            <section id="ejercicio8">Crear un programa que permita convertir una cantidad de dinero de una moneda a otra. El programa debe solicitar al usuario el monto a convertir, la moneda de origen y la moneda de destino, y mostrar el resultado de la conversión.</section>
             
             <form action="ej8.php" method="POST" class="text-center">
                 
@@ -210,7 +211,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
         <div class="Ejercicio 9">
             <div class="text-center bg-primary text-white p-3 rounded shadow">Ejercicio 9</div>
             
-            <p class="text-center">Desarrollar un programa que genere contraseñas seguras. El programa debe permitir al usuario especificar la longitud y los criterios de la contraseña (mayúsculas, minúsculas, números, caracteres especiales) y generar una contraseña aleatoria.</p>
+            <section id="ejercicio9">Desarrollar un programa que genere contraseñas seguras. El programa debe permitir al usuario especificar la longitud y los criterios de la contraseña (mayúsculas, minúsculas, números, caracteres especiales) y generar una contraseña aleatoria.</section>
             
             <form action="ej9.php" method="GET" class="text-center">
                 
@@ -224,7 +225,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
         <div class="Ejercicio 10">
             <div class="text-center bg-primary text-white p-3 rounded shadow">Ejercicio 10</div>
             
-            <p class="text-center">Desarrolla un programa que calcule el índice de masa corporal (IMC) de una persona. El programa debe solicitar al usuario su peso y altura, y mostrar el resultado del cálculo del IMC, tanto en forma numérica como visual.</p>
+            <section id="ejercicio10">Desarrolla un programa que calcule el índice de masa corporal (IMC) de una persona. El programa debe solicitar al usuario su peso y altura, y mostrar el resultado del cálculo del IMC, tanto en forma numérica como visual.</section>
             
             <form action="ej10.php" method="POST" class="text-center">
                 
