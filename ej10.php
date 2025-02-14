@@ -40,7 +40,7 @@ if($method === "POST") {
     
     if( ($altura and $peso) !== false and ($altura and $peso) !== null) {
         
-        $resultado = calcularIMC($altura, $peso);
+        $resultado = bcdiv(calcularIMC($altura, $peso), '1', 2);
         
         echo "
         <style>

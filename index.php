@@ -8,11 +8,32 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
         <title>EJERCICIOS</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     </head>
     <body>
         
+        <nav class="navbar">
+            <div class="logo">Ejercicios Rubicom <3</div>
+            
+            <select id="ejercicios" name="ejercicios">
+                <option value="" disabled selected>Ejercicios</option>
+                <option>Ejercicio 1</option>
+                <option>Ejercicio 2</option>
+                <option>Ejercicio 3</option>
+                <option>Ejercicio 4</option>
+                <option>Ejercicio 5</option>
+                <option>Ejercicio 6</option>
+                <option>Ejercicio 7</option>
+                <option>Ejercicio 8</option>
+                <option>Ejercicio 9</option>
+                <option>Ejercicio 10</option>
+            </select>
+            
+        </nav>
+        
         <div class="Ejercicio 1">
-            <div>Ejercicio 1</div>
+            <div class="text-center bg-primary text-white p-3 rounded shadow">Ejercicio 1</div>
             
             <p>Indique un número y se hara una sumatoria de todos los números pares desde 1 hasta el número elegido.</p>
             
@@ -20,7 +41,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                 
                 <label for="numero">Número:</label>
             
-                <input type="number" id="numero" name="numero" placeholder="Indique un número..." required>
+                <input class="input" type="number" id="numero" name="numero" placeholder="Indique un número..." required>
             
                 <input type="submit" value="SUMAR">
                 
@@ -31,7 +52,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
         <br> <br> <br>
         
         <div class="Ejercicio 2">
-            <div>Ejercicio 2</div>
+            <div class="text-center bg-primary text-white p-3 rounded shadow">Ejercicio 2</div>
             
             <p>Indique un número entero y se le calculará su factorial.</p>
             
@@ -39,7 +60,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                 
                 <label for="numero">Número:</label>
                 
-                <input type="number" id="numero" name="numero" placeholder="Indique un número..." required>
+                <input class="input" type="number" id="numero" name="numero" placeholder="Indique un número..." required>
                 
                 <input type="submit" value="FACTORIAL">
                 
@@ -49,7 +70,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
         <br> <br> <br>
         
         <div class="Ejercicio 3">
-            <div>Ejercicio 3</div>
+            <div class="text-center bg-primary text-white p-3 rounded shadow">Ejercicio 3</div>
             
             <p>Indique un número del 1 al 100 y se indicará si es un número primo o no.</p>
             
@@ -57,7 +78,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                 
                 <label for="numero">Número:</label> 
                 
-                <input type="number" id="numero" name="numero" placeholder="Indique un número..." min="1" max="100" required>
+                <input class="input" type="number" id="numero" name="numero" placeholder="Indique un número..." min="1" max="100" required>
                 
                 <input type="submit" value="ENVIAR">
             </form>
@@ -66,7 +87,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
         <br> <br> <br>
         
         <div class="Ejercicio 4">
-            <div>Ejercicio 4</div>
+            <div class="text-center bg-primary text-white p-3 rounded shadow">Ejercicio 4</div>
             
             <p>Ingrese una cantidad de metros y se hara una conversión a lo que decida.</p>
             
@@ -82,7 +103,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                 <br> <br> 
                 
                 <label for="metros">Metros:</label>
-                <input type="number" step="any" id="metros" name="metros" placeholder="Seleccione un número..." required>
+                <input class="input" type="number" step="any" id="metros" name="metros" placeholder="Seleccione un número..." required>
                 <input type="submit" value="CONVERTIR">
                 
             </form>
@@ -91,14 +112,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
         <br> <br> <br>
         
         <div class="Ejercicio 5">
-            <div>Ejercicio 5</div>
+            <div class="text-center bg-primary text-white p-3 rounded shadow">Ejercicio 5</div>
             
             <p>Elegir un número, si esta en la lista se mostrará la posición en la que está.</p>
             
             <form action="ej5.php" method="POST">
                 
                 <label for="numero">Número:</label>
-                <input type="number" id="numero" name="numero" placeholder="Ingrese un número..." required>
+                <input class="input" type="number" id="numero" name="numero" placeholder="Ingrese un número..." required>
                 <input type="submit" value="BUSCAR">
                 
             </form>
@@ -107,7 +128,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
         <br> <br> <br>
 
         <div class="Ejercicio 6">
-            <div>Ejercicio 6</div>
+            <div class="text-center bg-primary text-white p-3 rounded shadow">Ejercicio 6</div>
             
             <p>Crear un algorítmo en donde todos los números del 1 al 100 que se los multiplique por 5 y se lo divida por 7, si su resto es menor o igual a 3, se mostraran y los números que hayan cumplido los requisitos seran agregados a un arreglo.</p>
             
@@ -128,18 +149,19 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
             <form action="ej7.php" method="POST" class="text-center">
                 
                 <label for="cuentaSinPropina">Cuenta a pagar sin propina:</label>
-                <input type="number" id="cuentaSinPropina" name="cuentaSinPropina" placeholder="Monto...">
+                <input class="input" type="number" id="cuentaSinPropina" name="cuentaSinPropina" placeholder="Monto...">
                 
                 <br> <br>
                 
                 <label for="porcentajePropina">Porcentaje para propina:</label>
-                <input type="number" id="porcentajePropina" name="porcentajePropina" placeholder="Porcentaje...">
+                <input class="input" type="number" id="porcentajePropina" name="porcentajePropina" placeholder="Porcentaje...">
                 
                 <br> <br> 
                 
                 <input type="submit" value="CALCULAR"> 
                
             </form>
+            
         </div>
         
         <br> <br> <br>
@@ -174,7 +196,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                 <br> <br>
 
                 <label for="monto">Monto:</label>
-                <input type="number" id="monto" name="monto" placeholder="Indique el monto a convertir...">
+                <input class="input" type="number" id="monto" name="monto" placeholder="Indique el monto a convertir...">
                 
                 <br> <br>
                 
@@ -207,12 +229,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
             <form action="ej10.php" method="POST" class="text-center">
                 
                 <label for="altura">Altura en centimetros:</label>
-                <input type="number" id="altura" name="altura" placeholder="Indique su altura...">
+                <input class="input" type="number" id="altura" name="altura" placeholder="Indique su altura...">
                 
                 <br> <br>
                 
                 <label for="peso">Peso en kilogramos:</label>
-                <input type="number" id="peso" name="peso" placeholder="Indique su peso...">
+                <input class="input" type="number" id="peso" name="peso" placeholder="Indique su peso...">
                 
                 <br> <br>
                 
