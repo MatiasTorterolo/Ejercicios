@@ -1,44 +1,42 @@
 
 body{
-    
-    margin: 0; 
-    padding: 0; 
-    padding-top: 100px;
+ 
+    padding-top: 85px;
     font-family: 'Poppins', sans-serif; 
-    background-color: #f4f4f4; 
+    background-color: white; 
+    /* background-color: #f4f4f4; */ 
     color: #333; 
     flex-direction: column;
     text-align: center;
     display: flex; 
     justify-content: center; 
     align-items: center; 
-    
 }
 
 div > * {
-    padding-bottom: 60px;
-    margin-bottom: 10px;
-    width: 1000px;
     
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    width: 900px;
+    background-color: #f4f4f4;
+    /* background-color: #dcdcdc #f4f4f4; */
+    border-radius: 15px;
 }
 
 .navbar{
     
-    position: sticky;
+    position: fixed;
     display: flex;
-    justify-content: space-between;
     border-radius: 15px;
-    height: 70px;
+    height: 55px;
     color: whitesmoke;
     background: linear-gradient(to right, #ff5733, #c70039);
     padding: 15px 20px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 1000;
-    
 }
 
 .logo{
@@ -51,3 +49,33 @@ div > * {
     width: 250px;
 }
 
+.footer-bar {
+    
+    display: flex;
+    /* border-radius: 15px; */
+    height: 55px;
+    color: whitesmoke;
+    background: linear-gradient(to right, #ff5733, #c70039);
+    padding: 15px 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    justify-content: center; 
+}
+
+.footer-bar nav ul {
+    
+    list-style-type: none;
+}
+
+.footer-bar nav ul li a {
+    
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.footer-bar nav ul li a:hover {
+    
+    text-decoration: underline;
+}

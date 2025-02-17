@@ -44,205 +44,222 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
             }
         </script>
         
-        <div class="Ejercicio-1">
-             
+        <div class="Ejercicio-1"> 
             <div class="text-center bg-primary text-white p-3 rounded shadow">Ejercicio 1</div>
             
-            <section id="ejercicio1">Indique un número y se hara una sumatoria de todos los números pares desde 1 hasta el número elegido.</section>
+            <div>
+                <section id="ejercicio1">Indique un número y se hara una sumatoria de todos los números pares desde 1 hasta el número elegido.</section>
             
-            <form action="ej1.php" method="POST">
+                <form action="ej1.php" method="POST">
                 
-                <label for="numero">Número:</label>
+                    <label for="numero">Número:</label>
             
-                <input class="input" type="number" id="numero" name="numero" placeholder="Indique un número..." required>
+                    <input class="input" type="number" id="numero" name="numero" placeholder="Indique un número..." required>
             
-                <input type="submit" value="SUMAR">    
-            </form>
-            
+                    <input type="submit" value="SUMAR">    
+                </form>
+            </div>
         </div>
   
-        <div class="Ejercicio 2">
-            
+        <div class="Ejercicio 2"> 
             <div class="text-center bg-primary text-white p-3 rounded shadow">Ejercicio 2</div>
             
-            <section id="ejercicio2">Indique un número entero y se le calculará su factorial.</section>
+            <div>
+                <section id="ejercicio2">Indique un número entero y se le calculará su factorial.</section>
             
-            <form action="ej2.php" method="POST">
+                <form action="ej2.php" method="POST">
                 
-                <label for="numero">Número:</label>
+                    <label for="numero">Número:</label>
                 
-                <input class="input" type="number" id="numero" name="numero" placeholder="Indique un número..." required>
+                    <input class="input" type="number" id="numero" name="numero" placeholder="Indique un número..." required>
                 
-                <input type="submit" value="FACTORIAL">        
-            </form>
-            
+                    <input type="submit" value="FACTORIAL">        
+                </form>
+            </div>
         </div>
         
-        <div class="Ejercicio 3">
-            
+        <div class="Ejercicio 3"> 
             <div class="text-center bg-primary text-white p-3 rounded shadow">Ejercicio 3</div>
             
-            <section id="ejercicio3">Indique un número del 1 al 100 y se indicará si es un número primo o no.</section>
+            <div>
+                <section id="ejercicio3">Indique un número del 1 al 100 y se indicará si es un número primo o no.</section>
             
-            <form action="ej3.php" method="POST">
+                <form action="ej3.php" method="POST">
                 
-                <label for="numero">Número:</label> 
+                    <label for="numero">Número:</label> 
                 
-                <input class="input" type="number" id="numero" name="numero" placeholder="Indique un número..." min="1" max="100" required>
+                    <input class="input" type="number" id="numero" name="numero" placeholder="Indique un número..." min="1" max="100" required>
                 
-                <input type="submit" value="ENVIAR">
-            </form>
-            
+                    <input type="submit" value="ENVIAR">
+                </form>  
+            </div>
         </div>
         
         <div class="Ejercicio 4">
-            
             <div class="text-center bg-primary text-white p-3 rounded shadow">Ejercicio 4</div>
+           
+            <div>
+                <section id="ejercicio4">Ingrese una cantidad de metros y se hara una conversión a lo que decida.</section>
             
-            <section id="ejercicio4">Ingrese una cantidad de metros y se hara una conversión a lo que decida.</section>
-            
-            <form action="ej4.php" method="POST">
+                <form action="ej4.php" method="POST">
                 
-                <label for="medida">Medida:</label>
-                <select id="medida" name="medida">
-                    <option value="centimetros">Centímetros</option>
-                    <option value="pulgadas">Pulgadas</option>
-                    <option value="pies">Pies</option>
-                </select>
+                    <label for="medida">Medida:</label>
+                    <select id="medida" name="medida">
+                        <option value="centimetros">Centímetros</option>
+                        <option value="pulgadas">Pulgadas</option>
+                        <option value="pies">Pies</option>
+                    </select>
                 
-                <br> <br> 
+                    <br> <br> 
                 
-                <label for="metros">Metros:</label>
-                <input class="input" type="number" step="any" id="metros" name="metros" placeholder="Seleccione un número..." required>
+                    <label for="metros">Metros:</label>
+                    <input class="input" type="number" step="any" id="metros" name="metros" placeholder="Seleccione un número..." required>
                 
-                <br> <br>
+                    <br> <br>
                 
-                <input type="submit" value="CONVERTIR">    
-            </form>
-            
+                    <input type="submit" value="CONVERTIR">    
+                </form>
+            </div>
         </div>
         
         <div class="Ejercicio 5">
             <div class="text-center bg-primary text-white p-3 rounded shadow">Ejercicio 5</div>
             
-            <section id="ejercicio5">Elegir un número, si esta en la lista se mostrará la posición en la que está.</section>
+            <div>
+                <section id="ejercicio5">Elegir un número, si esta en la lista se mostrará la posición en la que está.</section>
             
-            <form action="ej5.php" method="POST">
+                <form action="ej5.php" method="POST">
                 
-                <label for="numero">Número:</label>
-                <input class="input" type="number" id="numero" name="numero" placeholder="Ingrese un número..." required>
-                <input type="submit" value="BUSCAR">
-            </form>
-            
+                    <label for="numero">Número:</label>
+                    <input class="input" type="number" id="numero" name="numero" placeholder="Ingrese un número..." required>
+                    <input type="submit" value="BUSCAR">
+                </form>
+            </div>
         </div>
 
         <div class="Ejercicio 6">
             <div class="text-center bg-primary text-white p-3 rounded shadow">Ejercicio 6</div>
             
-            <section id="ejercicio6">Crear un algorítmo en donde todos los números del 1 al 100 que se los multiplique por 5 y se lo divida por 7, si su resto es menor o igual a 3, se mostraran y los números que hayan cumplido los requisitos seran agregados a un arreglo.</section>
+            <div>
+                <section id="ejercicio6">Crear un algorítmo en donde todos los números del 1 al 100 que se los multiplique por 5 y se lo divida por 7, si su resto es menor o igual a 3, se mostraran y los números que hayan cumplido los requisitos seran agregados a un arreglo.</section>
             
-            <form action="ej6.php" method="GET">
+                <form action="ej6.php" method="GET">
                 
-                <input type="submit" value="MOSTRAR">   
-            </form>
-            
+                    <input type="submit" value="MOSTRAR">   
+                </form>
+            </div>   
         </div>
         
         <div class="Ejercicio 7">
             <div class="text-center bg-primary text-white p-3 rounded shadow">Ejercicio 7</div>
             
-            <section id="ejercicio7">Calcular el monto de propina a dejar en un restaurante. El programa debe solicitar al usuario el monto total de la cuenta y el porcentaje de propina deseado, y calcular el monto total a pagar.</section>
+            <div>
+                <section id="ejercicio7">Calcular el monto de propina a dejar en un restaurante. El programa debe solicitar al usuario el monto total de la cuenta y el porcentaje de propina deseado, y calcular el monto total a pagar.</section>
             
-            <form action="ej7.php" method="POST" class="text-center">
+                <form action="ej7.php" method="POST" class="text-center">
+                    <label for="cuentaSinPropina">Cuenta a pagar sin propina:</label>
+                    <input class="input" type="number" id="cuentaSinPropina" name="cuentaSinPropina" placeholder="Monto...">
                 
-                <label for="cuentaSinPropina">Cuenta a pagar sin propina:</label>
-                <input class="input" type="number" id="cuentaSinPropina" name="cuentaSinPropina" placeholder="Monto...">
+                    <br> <br>
                 
-                <br> <br>
+                    <label for="porcentajePropina">Porcentaje para propina:</label>
+                    <input class="input" type="number" id="porcentajePropina" name="porcentajePropina" placeholder="Porcentaje...">
                 
-                <label for="porcentajePropina">Porcentaje para propina:</label>
-                <input class="input" type="number" id="porcentajePropina" name="porcentajePropina" placeholder="Porcentaje...">
+                    <br> <br> 
                 
-                <br> <br> 
-                
-                <input type="submit" value="CALCULAR"> 
-               
-            </form>
-            
+                    <input type="submit" value="CALCULAR"> 
+                </form>
+            </div>
         </div>
         
         <div class="Ejercicio 8">
             <div class="text-center bg-primary text-white p-3 rounded shadow">Ejercicio 8</div>
             
-            <section id="ejercicio8">Crear un programa que permita convertir una cantidad de dinero de una moneda a otra. El programa debe solicitar al usuario el monto a convertir, la moneda de origen y la moneda de destino, y mostrar el resultado de la conversión.</section>
+            <div>
+                <section id="ejercicio8">Crear un programa que permita convertir una cantidad de dinero de una moneda a otra. El programa debe solicitar al usuario el monto a convertir, la moneda de origen y la moneda de destino, y mostrar el resultado de la conversión.</section>
             
-            <form action="ej8.php" method="POST" class="text-center">
+                <form action="ej8.php" method="POST" class="text-center">
                 
-                <label for="monedaActual">Desde la divisa:</label>
-                <select id="monedaActual" name="monedaActual">
-                    <option value="AR">AR</option>
-                    <option value="USD">USD</option>
-                    <option value="EUR">EUR</option>
-                    <option value="BRL">BRL</option>
-                    <option value="CLP">CLP</option>
-                </select>
+                    <label for="monedaActual">Desde la divisa:</label>
+                    <select id="monedaActual" name="monedaActual">
+                        <option value="AR">AR</option>
+                        <option value="USD">USD</option>
+                        <option value="EUR">EUR</option>
+                        <option value="BRL">BRL</option>
+                        <option value="CLP">CLP</option>
+                    </select>
                 
-                <br> <br> 
+                    <br> <br> 
                 
-                <label for="monedaConvertir">Hasta la divisa:</label>
-                <select id="monedaConvertir" name="monedaConvertir">
-                    <option value="USD">USD</option>
-                    <option value="EUR">EUR</option>
-                    <option value="AR">AR</option>
-                    <option value="BRL">BRL</option>
-                    <option value="CLP">CLP</option>
-                </select>
+                    <label for="monedaConvertir">Hasta la divisa:</label>
+                    <select id="monedaConvertir" name="monedaConvertir">
+                        <option value="USD">USD</option>
+                        <option value="EUR">EUR</option>
+                        <option value="AR">AR</option>
+                        <option value="BRL">BRL</option>
+                        <option value="CLP">CLP</option>
+                    </select>
                 
-                <br> <br>
+                    <br> <br>
 
-                <label for="monto">Monto:</label>
-                <input class="input" type="number" id="monto" name="monto" placeholder="Indique el monto a convertir...">
+                    <label for="monto">Monto:</label>
+                    <input class="input" type="number" id="monto" name="monto" placeholder="Indique el monto a convertir...">
                 
-                <br> <br>
+                    <br> <br>
                 
-                <input type="submit" value="CONVERTIR">
-                
-            </form>
+                    <input type="submit" value="CONVERTIR"> 
+                </form>
+            </div>     
         </div>
         
         <div class="Ejercicio 9">
             <div class="text-center bg-primary text-white p-3 rounded shadow">Ejercicio 9</div>
             
-            <section id="ejercicio9">Desarrollar un programa que genere contraseñas seguras. El programa debe permitir al usuario especificar la longitud y los criterios de la contraseña (mayúsculas, minúsculas, números, caracteres especiales) y generar una contraseña aleatoria.</section>
+            <div>
+                <section id="ejercicio9">Desarrollar un programa que genere contraseñas seguras. El programa debe permitir al usuario especificar la longitud y los criterios de la contraseña (mayúsculas, minúsculas, números, caracteres especiales) y generar una contraseña aleatoria.</section>
             
-            <form action="ej9.php" method="GET" class="text-center">
-                
-               <input type="submit" value="GENERAR CONTRASEÑA">
-                
-            </form>
+                <form action="ej9.php" method="GET" class="text-center">
+                    <input type="submit" value="GENERAR CONTRASEÑA">
+                </form>
+            </div> 
         </div>
         
         <div class="Ejercicio 10">
             <div class="text-center bg-primary text-white p-3 rounded shadow">Ejercicio 10</div>
             
-            <section id="ejercicio10">Desarrolla un programa que calcule el índice de masa corporal (IMC) de una persona. El programa debe solicitar al usuario su peso y altura, y mostrar el resultado del cálculo del IMC, tanto en forma numérica como visual.</section>
+            <div>
+                <section id="ejercicio10">Desarrolla un programa que calcule el índice de masa corporal (IMC) de una persona. El programa debe solicitar al usuario su peso y altura, y mostrar el resultado del cálculo del IMC, tanto en forma numérica como visual.</section>
             
-            <form action="ej10.php" method="POST" class="text-center">
+                <form action="ej10.php" method="POST" class="text-center">
                 
-                <label for="altura">Altura en centimetros:</label>
-                <input class="input" type="number" id="altura" name="altura" placeholder="Indique su altura...">
+                    <label for="altura">Altura en centimetros:</label>
+                    <input class="input" type="number" id="altura" name="altura" placeholder="Indique su altura...">
                 
-                <br> <br>
+                    <br> <br>
                 
-                <label for="peso">Peso en kilogramos:</label>
-                <input class="input" type="number" id="peso" name="peso" placeholder="Indique su peso...">
+                    <label for="peso">Peso en kilogramos:</label>
+                    <input class="input" type="number" id="peso" name="peso" placeholder="Indique su peso...">
                 
-                <br> <br>
+                    <br> <br>
                 
-                <input type="submit" value="Calcular IMC">
- 
-            </form>
+                    <input type="submit" value="Calcular IMC">
+                </form>
+            </div>           
         </div>
-        <br> <br> <br> 
+        
+        <footer class="footer-bar">
+            <nav>           
+                <ul>
+                    <li><a href="#" onclick="scrollToTop()">Volver al Inicio</a></li>
+                </ul>
+            </nav>
+        </footer>
+        
+        <script>
+            function volverAlInicio() {
+                
+                window.scrollTo({ top: 0, behaivor: "smooth"});
+            }
+        </script>
     </body>
 </html>
