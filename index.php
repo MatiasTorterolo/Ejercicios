@@ -8,15 +8,15 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
         <title>EJERCICIOS</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/style.css">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         
         <nav class="navbar">
             <div class="logo">Ejercicios Rubicom <3</div>
             
-            <select id="ejercicios" name="ejercicios">
+            <select id="ejercicios" onchange="desplazarHaciaEjercicio()">
                 <option value="" disabled selected>Ejercicios</option> <!-- aca voy a tener que usar js para usar scrollIntoView() -->
                 <option value="ejercicio1">Ejercicio 1</option>
                 <option value="ejercicio2">Ejercicio 2</option>
@@ -32,7 +32,20 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
             
         </nav>
         
-        <div class="Ejercicio 1">
+        <script>
+            function desplazarHaciaEjercicio() {
+                
+                var ejercicio = document.getElementById("ejercicios").value;
+                
+                if(ejercicio) {
+                    document.getElementById(ejercicio).scrollIntoView({ behaivor: "smooth", block: "center"});
+                }
+                
+            }
+        </script>
+        
+        <div class="Ejercicio-1">
+             
             <div class="text-center bg-primary text-white p-3 rounded shadow">Ejercicio 1</div>
             
             <section id="ejercicio1">Indique un número y se hara una sumatoria de todos los números pares desde 1 hasta el número elegido.</section>
@@ -43,14 +56,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
             
                 <input class="input" type="number" id="numero" name="numero" placeholder="Indique un número..." required>
             
-                <input type="submit" value="SUMAR">
-                
+                <input type="submit" value="SUMAR">    
             </form>
             
         </div>
-        
-        <br> <br> <br>
-        
+  
         <div class="Ejercicio 2">
             
             <div class="text-center bg-primary text-white p-3 rounded shadow">Ejercicio 2</div>
@@ -63,14 +73,13 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                 
                 <input class="input" type="number" id="numero" name="numero" placeholder="Indique un número..." required>
                 
-                <input type="submit" value="FACTORIAL">
-                
+                <input type="submit" value="FACTORIAL">        
             </form>
+            
         </div>
         
-        <br> <br> <br>
-        
         <div class="Ejercicio 3">
+            
             <div class="text-center bg-primary text-white p-3 rounded shadow">Ejercicio 3</div>
             
             <section id="ejercicio3">Indique un número del 1 al 100 y se indicará si es un número primo o no.</section>
@@ -83,11 +92,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                 
                 <input type="submit" value="ENVIAR">
             </form>
+            
         </div>
         
-        <br> <br> <br>
-        
         <div class="Ejercicio 4">
+            
             <div class="text-center bg-primary text-white p-3 rounded shadow">Ejercicio 4</div>
             
             <section id="ejercicio4">Ingrese una cantidad de metros y se hara una conversión a lo que decida.</section>
@@ -105,12 +114,13 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                 
                 <label for="metros">Metros:</label>
                 <input class="input" type="number" step="any" id="metros" name="metros" placeholder="Seleccione un número..." required>
-                <input type="submit" value="CONVERTIR">
                 
+                <br> <br>
+                
+                <input type="submit" value="CONVERTIR">    
             </form>
+            
         </div>
-        
-        <br> <br> <br>
         
         <div class="Ejercicio 5">
             <div class="text-center bg-primary text-white p-3 rounded shadow">Ejercicio 5</div>
@@ -122,11 +132,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                 <label for="numero">Número:</label>
                 <input class="input" type="number" id="numero" name="numero" placeholder="Ingrese un número..." required>
                 <input type="submit" value="BUSCAR">
-                
             </form>
+            
         </div>
-        
-        <br> <br> <br>
 
         <div class="Ejercicio 6">
             <div class="text-center bg-primary text-white p-3 rounded shadow">Ejercicio 6</div>
@@ -135,12 +143,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
             
             <form action="ej6.php" method="GET">
                 
-                <input type="submit" value="MOSTRAR">
-                
+                <input type="submit" value="MOSTRAR">   
             </form>
+            
         </div>
-        
-        <br> <br> <br>
         
         <div class="Ejercicio 7">
             <div class="text-center bg-primary text-white p-3 rounded shadow">Ejercicio 7</div>
@@ -164,8 +170,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
             </form>
             
         </div>
-        
-        <br> <br> <br>
         
         <div class="Ejercicio 8">
             <div class="text-center bg-primary text-white p-3 rounded shadow">Ejercicio 8</div>
@@ -206,8 +210,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
             </form>
         </div>
         
-        <br> <br> <br>
-        
         <div class="Ejercicio 9">
             <div class="text-center bg-primary text-white p-3 rounded shadow">Ejercicio 9</div>
             
@@ -219,8 +221,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                 
             </form>
         </div>
-        
-        <br> <br> <br>
         
         <div class="Ejercicio 10">
             <div class="text-center bg-primary text-white p-3 rounded shadow">Ejercicio 10</div>
@@ -243,6 +243,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
  
             </form>
         </div>
-        <br> <br> <br> <br> <br> <br> <br> <br>
+        <br> <br> <br> 
     </body>
 </html>

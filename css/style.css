@@ -16,7 +16,10 @@ body{
 }
 
 div > * {
-    margin-bottom: 20px;
+    padding-bottom: 60px;
+    margin-bottom: 10px;
+    width: 1000px;
+    
 }
 
 .navbar{
@@ -25,6 +28,7 @@ div > * {
     display: flex;
     justify-content: space-between;
     border-radius: 15px;
+    height: 70px;
     color: whitesmoke;
     background: linear-gradient(to right, #ff5733, #c70039);
     padding: 15px 20px;
