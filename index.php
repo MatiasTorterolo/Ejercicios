@@ -50,15 +50,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
             <div class="ejercicio-container">
                 <section id="ejercicio1">Indique un número y se hara una sumatoria de todos los números pares desde 1 hasta el número elegido.</section>
             
-                <form id="ej1">
+                <form class="exercise-form" id="ej1" data-action="ej1.php">
                 
-                    <input class="input" type="number" id="numero" name="numero" placeholder="Indique un número..." required>
+                    <input class="exercise-input" type="number" id="numero" name="numero" placeholder="Indique un número..." required>
             
-                    <input type="submit" value="SUMAR">    
+                    <input type="submit" value="SUMAR">   
+                    
+                    <span class="resultado-container" id="resultado"></span>  
                 </form>
-                 
-                
-                <span class="resultado-container" id="resultado"></span>  
             </div>
         </div>
   
