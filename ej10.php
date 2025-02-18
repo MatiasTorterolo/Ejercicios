@@ -8,16 +8,16 @@ function calcularIMC($altura, $peso) {
 
 function verificarIMC($imc) {
     
-    if($imc <= 18.5) {
+    if($imc < 18.5) {
         
         echo "<h2 style='color: #800000;'>Usted está bajo de peso (alto riesgo).</h2>";
-    } elseif ($imc >= 18.5 and $imc <= 24.9) {
+    } elseif ($imc >= 18.5 and $imc < 25) {
     
         echo "<h2 style='color: green;'>Usted tiene un peso normal.</h2>";
-    } elseif ($imc >= 25 and $imc <= 29.9) {
+    } elseif ($imc >= 25 and $imc < 30) {
     
         echo "<h2 style='color: #FFD700;'>Usted tiene sobrepeso.</h2>";
-    } elseif ($imc >= 30 and $imc <= 34.9) {
+    } elseif ($imc >= 30 and $imc < 35) {
     
         echo "<h2 style='color: #FF7F7F;'>Usted tiene Obesidad tipo I (bajo riesgo).</h2>";
     } elseif ($imc >= 35 and $imc <= 39.9) {

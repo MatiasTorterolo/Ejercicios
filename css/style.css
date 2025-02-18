@@ -4,23 +4,27 @@ body{
     padding-top: 85px;
     font-family: 'Poppins', sans-serif; 
     background-color: white; 
-    /* background-color: #f4f4f4; */ 
     color: #333; 
     flex-direction: column;
     text-align: center;
     display: flex; 
     justify-content: center; 
     align-items: center; 
+    /* background-color: #f4f4f4; */ 
 }
 
-div > * {
+.ejercicio-container{
     
-    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+    padding: 20px;
     margin-bottom: 30px;
     width: 900px;
     background-color: #f4f4f4;
-    /* background-color: #dcdcdc #f4f4f4; */
     border-radius: 15px;
+    
+    /* background-color: #dcdcdc #f4f4f4; */
 }
 
 .navbar{
@@ -78,4 +82,28 @@ div > * {
 .footer-bar nav ul li a:hover {
     
     text-decoration: underline;
+}
+
+#resultado {
+    
+    font-size: 30px;
+    font-weight: bold;
+    color: green;
+}
+
+.resultado-container:empty {
+    
+    border: none;
+}
+
+.resultado-container:not(:empty){
+    
+    display: none;
+    border: 2px solid blue;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center; 
+    width: auto; 
+    word-wrap: break-word; 
+    gap: 0;
 }
