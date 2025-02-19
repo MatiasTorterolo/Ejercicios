@@ -37,8 +37,6 @@ if($method === "POST") {
         
         echo json_encode(["resultado" => $resultado]);
         exit;
-        
-        //echo "El resultado es: " . $resultado . ".";
     }
 }
 

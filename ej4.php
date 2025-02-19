@@ -1,4 +1,5 @@
 <?php
+header("Content-Type: application/json; charset=UTF-8");
 
 function convertir($medida, $metros) {
     
@@ -18,14 +19,17 @@ $method = filter_input(INPUT_SERVER, 'REQUEST_METHOD', FILTER_SANITIZE_STRING);
 
 if($method === "POST") {
     
-    $metros = filter_input(INPUT_POST, 'metros', FILTER_VALIDATE_FLOAT);
     $medida = filter_input(INPUT_POST, 'medida');
+    $metros = filter_input(INPUT_POST, 'metros', FILTER_VALIDATE_FLOAT);
+    
     
     
     if($metros !== false and $metros !== null and $metros > 0) {
         
-        $resultado = convertir($medida, $metros);
+        $conversion = convertir($medida, $metros);
         
-        echo $metros . " metros son igual a " . $resultado . " " . $medida . ".";
+        $resultado =  $metros . " metros son igual a " . $conversion . " " . $medida . ".";
+        
+        echo json_encode(["resultado" => $resultado]);
     }
 }

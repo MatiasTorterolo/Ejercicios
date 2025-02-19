@@ -50,7 +50,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
             <div class="ejercicio-container">
                 <section id="ejercicio1">Indique un número y se hara una sumatoria de todos los números pares desde 1 hasta el número elegido.</section>
             
-                <form class="exercise-form" id="ej1" data-action="ej1.php">
+                <form class="exercise-form-numbers" id="ej1" data-action="ej1.php" method="POST">
                 
                     <input class="exercise-input" type="number" id="numero" name="numero" placeholder="Indique un número..." required>
             
@@ -67,18 +67,17 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
             <div class="ejercicio-container">
                 <section id="ejercicio2">Indique un número entero y se le calculará su factorial.</section>
             
-                <form action="ej2.php" method="POST">
+                <form class="exercise-form-numbers" id="ej2" data-action="ej2.php" method="POST">
                 
                     <label for="numero">Número:</label>
                 
-                    <input class="input" type="number" id="numero" name="numero" placeholder="Indique un número..." required>
+                    <input class="exercise-input" type="number" id="numero" name="numero" placeholder="Indique un número..." required>
                 
-                    <input type="submit" value="FACTORIAL">        
-                </form>
-                
-                <span class="resultado-container" id="resultado"></span>  
-            </div>
-            
+                    <input type="submit" value="FACTORIAL">
+                    
+                    <span class="resultado-container" id="resultado"></span>
+                </form> 
+            </div>   
         </div>
         
         <div class="Ejercicio 3"> 
@@ -87,16 +86,16 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
             <div class="ejercicio-container">
                 <section id="ejercicio3">Indique un número del 1 al 100 y se indicará si es un número primo o no.</section>
             
-                <form action="ej3.php" method="POST">
+                <form class="exercise-form-numbers" id="ej3" data-action="ej3.php" method="POST">
                 
                     <label for="numero">Número:</label> 
                 
-                    <input class="input" type="number" id="numero" name="numero" placeholder="Indique un número..." min="1" max="100" required>
+                    <input class="exercise-input" type="number" id="numero" name="numero" placeholder="Indique un número..." min="1" max="100" required>
                 
                     <input type="submit" value="ENVIAR">
+                    
+                    <span class="resultado-container" id="resultado"></span> 
                 </form>
-                
-                <span class="resultado-container" id="resultado"></span>  
             </div>
         </div>
         
@@ -106,29 +105,27 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
             <div class="ejercicio-container">
                 <section id="ejercicio4">Ingrese una cantidad de metros y se hara una conversión a lo que decida.</section>
             
-                <form action="ej4.php" method="POST">
+                <form class="exercise-form-conversion-measure" id="ej4" data-action="ej4.php" method="POST">
                 
-                    <label for="medida">Medida:</label>
-                    <select id="medida" name="medida">
-                        <option value="centimetros">Centímetros</option>
-                        <option value="pulgadas">Pulgadas</option>
-                        <option value="pies">Pies</option>
-                    </select>
-                
-                    <br> <br> 
-                
-                    <label for="metros">Metros:</label>
-                    <input class="input" type="number" step="any" id="metros" name="metros" placeholder="Seleccione un número..." required>
-                
-                    <br> <br>
-                
-                    <input type="submit" value="CONVERTIR">    
+                    <div class="form-group">
+                        <label for="medida">Medida:</label>
+                        <select class="exercise-select" id="medida" name="medida">
+                            <option value="centimetros">Centímetros</option>
+                            <option value="pulgadas">Pulgadas</option>
+                            <option value="pies">Pies</option>
+                        </select> 
+                    </div>
+
+                    <div class="form-group-input">
+                        <label for="metros">Metros:</label>
+                        <input class="exercise-input" type="number" step="any" id="metros" name="metros" min="1" placeholder="Seleccione un número..." required>
+                    </div>
+ 
+                    <input class="mt-4" type="submit" value="CONVERTIR">    
+                    
+                    <span class="resultado-container" id="resultado"></span> 
                 </form>
-                
-                <span class="resultado-container" id="resultado"></span>  
             </div>
-            
-             
         </div>
         
         <div class="Ejercicio 5">
@@ -272,6 +269,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
             </nav>
         </footer>
         
-        <script src="js/ej1.js"></script>
+        <script src="js/ejerciciosUnNumero.js"></script>
+        <script src="js/ej4.js"></script>
     </body>
 </html>

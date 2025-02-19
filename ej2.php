@@ -1,5 +1,7 @@
 <?php
 
+header("Content-Type: application/json; charset=UTF-8");
+
 function factorial($numero) {
     
     $sumatoria = 1;
@@ -13,19 +15,21 @@ function factorial($numero) {
     return $sumatoria;
 }
 
-$method = filter_input(INPUT_SERVER, 'REQUEST_METHOD', FILTER_SANITIZE_STRING);
+$method = filter_input(INPUT_SERVER, "REQUEST_METHOD", FILTER_SANITIZE_STRING);
 
 if($method === "POST") {
     
-    $numero = filter_input(INPUT_POST, 'numero', FILTER_VALIDATE_INT);
+    $numero = filter_input(INPUT_POST, "numero", FILTER_VALIDATE_INT);
     
     if($numero !== false and $numero !== null and $numero >= 0 and !(is_float($numero))) {
         
-        $resultado = factorial($numero);
+        $resultadoNumerico = factorial($numero);
         
-        echo "El factorial de " . $numero . " es " . $resultado . ".";
+        $resultado = "El factorial de " . $numero . " es " . $resultadoNumerico . ".";
     } else {
         
-        echo "El factorial de " . $numero . " no existe.";
+        $resultado = "El factorial de " . $numero . " no existe.";
     }
+    
+    echo json_encode(["resultado" => $resultado]);
 }

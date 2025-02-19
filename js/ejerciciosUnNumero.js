@@ -1,17 +1,14 @@
-
-
 document.addEventListener("DOMContentLoaded", function() {
    
-    const forms = document.querySelectorAll(".exercise-form");
+    const forms = document.querySelectorAll(".exercise-form-numbers");
     
     forms.forEach(form => {
         
         const input = form.querySelector(".exercise-input");
         const resultado = form.querySelector(".resultado-container");
         const actionUrl = form.getAttribute("data-action");
-        
-        
-        
+        const method = form.getAttribute("method");
+
         form.addEventListener("submit", function(event) {
            
             event.preventDefault();
@@ -19,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
             let numero = input.value.trim();
             
             fetch(actionUrl, {
-                method: "POST",
+                method: method,
                 headers: {
                     "Content-Type": "application/x-www-form-urlencoded"
                 },
@@ -27,10 +24,10 @@ document.addEventListener("DOMContentLoaded", function() {
             })
             .then(response => response.json())
             .then(data => {
+                
                 if (data.resultado !== undefined) {
                     
                     resultado.innerText = data.resultado; 
-                    
                 } else {
                     
                     resultado.innerText = "";

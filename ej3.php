@@ -1,5 +1,7 @@
 <?php
 
+header("Content-Type: application/json; charset=UTF-8");
+
 function esPrimo($numero) {
     
     if($numero === 1) {
@@ -21,22 +23,22 @@ function esPrimo($numero) {
     return true;
 } 
 
-$method = filter_input(INPUT_SERVER, 'REQUEST_METHOD', FILTER_SANITIZE_STRING);
+$method = filter_input(INPUT_SERVER, "REQUEST_METHOD", FILTER_SANITIZE_STRING);
 
 if($method === "POST") {
     
-    $numero = filter_input(INPUT_POST, 'numero', FILTER_VALIDATE_INT);
+    $numero = filter_input(INPUT_POST, "numero", FILTER_VALIDATE_INT);
     
     if($numero !== false and $numero !== null and $numero >= 1 and $numero <= 100) {
         
-        $resultado = esPrimo($numero);
-        
-        if($resultado) {
+        if(esPrimo($numero)) {
             
-            echo "El número " . $numero . " es un número primo.";
+            $resultado = "El número " . $numero . " es un número primo.";
         } else {
             
-            echo "El número " . $numero . " NO es un número primo.";
+            $resultado = "El número " . $numero . " NO es un número primo.";
         }
+        
+        echo json_encode(["resultado" => $resultado]);
     }
 }    
