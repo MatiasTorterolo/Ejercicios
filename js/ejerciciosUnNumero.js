@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
         
         const input = form.querySelector(".exercise-input");
         const resultado = form.querySelector(".resultado-container");
-        const actionUrl = form.getAttribute("data-action");
+        let actionUrl = form.getAttribute("data-action");
         const method = form.getAttribute("method");
 
         form.addEventListener("submit", function(event) {
@@ -15,24 +15,51 @@ document.addEventListener("DOMContentLoaded", function() {
             
             let numero = input.value.trim();
             
-            fetch(actionUrl, {
-                method: method,
-                headers: {
-                    "Content-Type": "application/x-www-form-urlencoded"
-                },
-                body: "numero=" + encodeURIComponent(numero)
-            })
-            .then(response => response.json())
-            .then(data => {
+            if(method === "GET") {
+                   
+                actionUrl = actionUrl.split('?')[0];
+                let params = new URLSearchParams(new FormData(form)).toString();
+                actionUrl += "?" + params;
                 
-                if (data.resultado !== undefined) {
+                fetch(actionUrl, {
                     
-                    resultado.innerText = data.resultado; 
-                } else {
+                    method: method,
                     
-                    resultado.innerText = "";
-                }
-            });
+                    headers: {
+                        "Content-Type": "application/x-www-form-urlencoded"
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                
+                    if (data.resultado !== undefined) {
+                    
+                        resultado.innerText = data.resultado; 
+                    } else {
+                    
+                        resultado.innerText = "";
+                    }
+                });
+            } else {
+                fetch(actionUrl, {
+                    method: method,
+                    headers: {
+                        "Content-Type": "application/x-www-form-urlencoded"
+                    },
+                    body: "numero=" + encodeURIComponent(numero)
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        
+                        if (data.resultado !== undefined) {
+                    
+                            resultado.innerText = data.resultado; 
+                        } else {
+                    
+                            resultado.innerText = "";
+                        }
+                });
+            }   
         });
         
         input.addEventListener("input", function() {

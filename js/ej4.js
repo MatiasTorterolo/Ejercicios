@@ -35,11 +35,11 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         });
         
-        inputMetros.addEventListener("input", function() {
+    inputMetros.addEventListener("input", function() {
 
-                if (inputMetros.value.trim() === "") {
-                resultado.innerText = "";
-            }
-        });
+        if (inputMetros.value.trim() === "") {
+            resultado.innerText = "";
+        }
+    });
 });
 

@@ -1,5 +1,7 @@
 <?php
 
+header("Content-Type: application/json; charset=UTF-8");
+
 function calcularPropina($cuentaSinPropina, $porcentajePropina) {
     
     
@@ -10,13 +12,21 @@ $method = filter_input(INPUT_SERVER, 'REQUEST_METHOD', FILTER_SANITIZE_STRING);
 
 if($method === "POST") {
     
-    $cuentaSinPropina = filter_input(INPUT_POST, 'cuentaSinPropina', FILTER_VALIDATE_FLOAT);
-    $porcentajePropina = filter_input(INPUT_POST, 'porcentajePropina', FILTER_VALIDATE_FLOAT);
+    $cuentaSinPropina = filter_input(INPUT_POST, "cuentaSinPropina", FILTER_VALIDATE_INT);
+    $porcentajePropina = filter_input(INPUT_POST, "porcentajePropina", FILTER_VALIDATE_INT);
+    
     
     if(($cuentaSinPropina and $porcentajePropina) !== false and ($cuentaSinPropina and $porcentajePropina) !== null) {
         
-        $resultado = calcularPropina($cuentaSinPropina, $porcentajePropina);
+        $propina = calcularPropina($cuentaSinPropina, $porcentajePropina);
         
-        echo "El total a pagar con la propina incluida es de $" . $resultado + $cuentaSinPropina . " pesos, la propina es de $" . $resultado . " pesos.";
+        $cuentaConPropina = $propina + $cuentaSinPropina;
+        
+        $resultado = "El total a pagar con la propina incluida es de $" . $cuentaConPropina . " pesos, la propina es de $" . $propina . " pesos.";
+               
+        echo json_encode(["resultado" => $resultado]);
+    } else {
+        echo json_encode(["resultado" => "Error: Los valores proporcionados son inválidos."]);
     }
+    
 }

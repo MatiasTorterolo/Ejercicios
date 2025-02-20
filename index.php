@@ -132,16 +132,16 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
             <div class="text-center bg-primary text-white p-3 mb-3 rounded shadow">Ejercicio 5</div>
             
             <div class="ejercicio-container">
-                <section id="ejercicio5">Elegir un número, si esta en la lista se mostrará la posición en la que está.</section>
+                <section id="ejercicio5">Elegir un número, si esta en la lista se mostrará la posición en la que está. <strong>Lista predefinida : [0] => 2 [1] => 23 [2] => 45 [3] => 56 [4] => 3443 [5] => 33 [6] => 5 [7] => 77 [8] => 88 [9] => 99 [10] => 70 [11] => 41 [12] => 32 [13] => 54 [14] => 57 [15] => 99 [16] => 10 [17] => 321 [18] => 56 [19] => 32 [20] => 222 [21] => 1231 [22] => 100 [23] => 45 [24] => 5443 [25] => 65 [26] => 85 [27] => 62</strong></section>
             
-                <form action="ej5.php" method="POST">
+                <form class="exercise-form-numbers" id="ej5" data-action="ej5.php" method="GET">
                 
                     <label for="numero">Número:</label>
-                    <input class="input" type="number" id="numero" name="numero" placeholder="Ingrese un número..." required>
+                    <input class="exercise-input" type="number" id="numero" name="numero" placeholder="Ingrese un número..." required>
                     <input type="submit" value="BUSCAR">
+                    
+                    <span class="resultado-container" id="resultado"></span> 
                 </form>
-                
-                <span class="resultado-container" id="resultado"></span>  
             </div> 
         </div>
 
@@ -164,21 +164,22 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
             <div class="ejercicio-container">
                 <section id="ejercicio7">Calcular el monto de propina a dejar en un restaurante. El programa debe solicitar al usuario el monto total de la cuenta y el porcentaje de propina deseado, y calcular el monto total a pagar.</section>
             
-                <form action="ej7.php" method="POST" class="text-center">
-                    <label for="cuentaSinPropina">Cuenta a pagar sin propina:</label>
-                    <input class="input" type="number" id="cuentaSinPropina" name="cuentaSinPropina" placeholder="Monto...">
-                
-                    <br> <br>
-                
-                    <label for="porcentajePropina">Porcentaje para propina:</label>
-                    <input class="input" type="number" id="porcentajePropina" name="porcentajePropina" placeholder="Porcentaje...">
-                
-                    <br> <br> 
-                
-                    <input type="submit" value="CALCULAR"> 
+                <form class="exercise-form-tip" id="ej4" data-action="ej7.php" method="POST" >
+                    
+                    <div class="form-group-input">
+                        <label for="cuentaSinPropina">Cuenta a pagar sin propina:</label>
+                        <input class="input-monto" type="number" id="cuentaSinPropina" name="cuentaSinPropina" placeholder="Monto..." required>
+                    </div>
+                    
+                    <div class="form-group-input">
+                        <label for="porcentajePropina">Porcentaje para propina:</label>
+                        <input class="input-porcentaje" type="number" id="porcentajePropina" name="porcentajePropina" placeholder="Porcentaje..." required>
+                    </div>
+                        
+                    <input class="mt-4" type="submit" value="CALCULAR"> 
+                    
+                    <span class="resultado-container" id="resultado"></span> 
                 </form>
-                
-                <span class="resultado-container" id="resultado"></span>  
             </div>
         </div>
         
@@ -271,5 +272,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
         
         <script src="js/ejerciciosUnNumero.js"></script>
         <script src="js/ej4.js"></script>
+        <script src="js/ej7.js"></script>
     </body>
 </html>
