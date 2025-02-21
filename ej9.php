@@ -1,5 +1,6 @@
 <?php
 
+header("Content-Type: application/json; charset=UTF-8");
 
 function generarContraseña() {
     
@@ -10,4 +11,4 @@ function generarContraseña() {
     return $contraseña;
 }
 
-echo "Su contraseña segura: " . generarContraseña();
+echo json_encode(["resultado" => generarContraseña()]);

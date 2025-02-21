@@ -151,7 +151,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
             <div class="ejercicio-container">
                 <section id="ejercicio6">Crear un algorítmo en donde todos los números del 1 al 100 que se los multiplique por 5 y se lo divida por 7, si su resto es menor o igual a 3, se mostraran y los números que hayan cumplido los requisitos seran agregados a un arreglo.</section>
             
-                <form action="ej6.php" method="GET">
+                <form action="ej6.php" id="ej6" method="GET">
                 
                     <input type="submit" value="MOSTRAR">   
                 </form>
@@ -164,7 +164,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
             <div class="ejercicio-container">
                 <section id="ejercicio7">Calcular el monto de propina a dejar en un restaurante. El programa debe solicitar al usuario el monto total de la cuenta y el porcentaje de propina deseado, y calcular el monto total a pagar.</section>
             
-                <form class="exercise-form-tip" id="ej4" data-action="ej7.php" method="POST" >
+                <form class="exercise-form-tip" id="ej7" data-action="ej7.php" method="POST" >
                     
                     <div class="form-group-input">
                         <label for="cuentaSinPropina">Cuenta a pagar sin propina:</label>
@@ -189,39 +189,39 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
             <div class="ejercicio-container">
                 <section id="ejercicio8">Crear un programa que permita convertir una cantidad de dinero de una moneda a otra. El programa debe solicitar al usuario el monto a convertir, la moneda de origen y la moneda de destino, y mostrar el resultado de la conversión.</section>
             
-                <form action="ej8.php" method="POST" class="text-center">
+                <form class="form-divisas" id="ej8" data-action="ej8.php" method="POST">
+                    
+                    <div class="form-group">
+                        <label for="monedaActual">Desde la divisa:</label>
+                        <select class="select-moneda-actual" id="monedaActual" name="monedaActual">
+                            <option value="AR">AR</option>
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                            <option value="BRL">BRL</option>
+                            <option value="CLP">CLP</option>
+                        </select>
+                    </div>
                 
-                    <label for="monedaActual">Desde la divisa:</label>
-                    <select id="monedaActual" name="monedaActual">
-                        <option value="AR">AR</option>
-                        <option value="USD">USD</option>
-                        <option value="EUR">EUR</option>
-                        <option value="BRL">BRL</option>
-                        <option value="CLP">CLP</option>
-                    </select>
-                
-                    <br> <br> 
-                
-                    <label for="monedaConvertir">Hasta la divisa:</label>
-                    <select id="monedaConvertir" name="monedaConvertir">
-                        <option value="USD">USD</option>
-                        <option value="EUR">EUR</option>
-                        <option value="AR">AR</option>
-                        <option value="BRL">BRL</option>
-                        <option value="CLP">CLP</option>
-                    </select>
-                
-                    <br> <br>
-
-                    <label for="monto">Monto:</label>
-                    <input class="input" type="number" id="monto" name="monto" placeholder="Indique el monto a convertir...">
-                
-                    <br> <br>
-                
-                    <input type="submit" value="CONVERTIR"> 
-                </form>
-                
-                <span class="resultado-container" id="resultado"></span>  
+                    <div class="form-group">
+                        <label for="monedaConvertir">Hasta la divisa:</label>
+                        <select class="select-moneda-convertir" id="monedaConvertir" name="monedaConvertir">
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                            <option value="AR">AR</option>
+                            <option value="BRL">BRL</option>
+                            <option value="CLP">CLP</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group-input">
+                        <label for="monto">Monto:</label>
+                        <input class="input-monto-conversion" type="number" id="monto" name="monto" placeholder="Indique el monto a convertir...">
+                    </div>
+                    
+                    <input class="mt-4" type="submit" value="CONVERTIR"> 
+                    
+                    <span class="resultado-container" id="resultado"></span> 
+                </form>  
             </div>     
         </div>
         
@@ -231,11 +231,13 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
             <div class="ejercicio-container">
                 <section id="ejercicio9">Desarrollar un programa que genere contraseñas seguras. El programa debe permitir al usuario especificar la longitud y los criterios de la contraseña (mayúsculas, minúsculas, números, caracteres especiales) y generar una contraseña aleatoria.</section>
             
-                <form action="ej9.php" method="GET" class="text-center">
+                <form class="form-contrasena" data-action="ej9.php" method="GET">
+                    
                     <input type="submit" value="GENERAR CONTRASEÑA">
-                </form>
                 
-                <span class="resultado-container" id="resultado"></span>  
+                    <span class="resultado-container" id="resultado"></span> 
+                    <button id="copy-button" class="copy-btn rounded-pill mt-2" style="display: none;">📋 Copy 📋</button>
+                </form>
             </div> 
         </div>
         
@@ -247,21 +249,21 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
             
                 <form action="ej10.php" method="POST" class="text-center">
                 
-                    <label for="altura">Altura en centimetros:</label>
-                    <input class="input" type="number" id="altura" name="altura" placeholder="Indique su altura...">
+                    <div class="form-group">
+                        <label for="altura">Altura en centimetros:</label>
+                        <input class="input" type="number" id="altura" name="altura" placeholder="Indique su altura...">
+                    </div>
                 
-                    <br> <br>
+                    <div class="form-group">
+                        <label for="peso">Peso en kilogramos:</label>
+                        <input class="input" type="number" id="peso" name="peso" placeholder="Indique su peso...">
+                    </div>
                 
-                    <label for="peso">Peso en kilogramos:</label>
-                    <input class="input" type="number" id="peso" name="peso" placeholder="Indique su peso...">
-                
-                    <br> <br>
-                
-                    <input type="submit" value="Calcular IMC">
+                    <input class="mt-4" type="submit" value="Calcular IMC">
                 </form>
             </div>           
         </div>
-        
+                    
         <footer class="footer-bar">
             <nav>           
                 <ul>
@@ -273,5 +275,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
         <script src="js/ejerciciosUnNumero.js"></script>
         <script src="js/ej4.js"></script>
         <script src="js/ej7.js"></script>
+        <script src="js/ej8.js"></script>
+        <script src="js/ej9.js"></script>
     </body>
 </html>

@@ -1,5 +1,7 @@
 <?php
 
+header("Content-Type: application/json; charset=UTF-8");
+
 $divisas = array(
     "USD" => 1,
     "EUR" => 0.96,
@@ -31,18 +33,20 @@ function convertirMoneda($monedaActual, $monedaConvertir, $monto) {
     return $montoConvertido;
 }
 
-$method = filter_input(INPUT_SERVER, 'REQUEST_METHOD', FILTER_SANITIZE_STRING);
+$method = filter_input(INPUT_SERVER, "REQUEST_METHOD", FILTER_SANITIZE_STRING);
 
 if($method === "POST") {
     
-    $monedaActual = filter_input(INPUT_POST, 'monedaActual', FILTER_SANITIZE_STRING);
-    $monedaConvertir = filter_input(INPUT_POST, 'monedaConvertir', FILTER_SANITIZE_STRING);
-    $monto = filter_input(INPUT_POST, 'monto', FILTER_VALIDATE_INT);
+    $monedaActual = filter_input(INPUT_POST, "monedaActual", FILTER_SANITIZE_STRING);
+    $monedaConvertir = filter_input(INPUT_POST, "monedaConvertir", FILTER_SANITIZE_STRING);
+    $monto = filter_input(INPUT_POST, "monto", FILTER_VALIDATE_INT);
     
     if(($monedaActual and $monedaConvertir and $monto) !== false and ($monedaActual and $monedaConvertir and $monto) !== null) {
         
-        $resultado = convertirMoneda($monedaActual, $monedaConvertir, $monto);
+        $montoConvertido = number_format(convertirMoneda($monedaActual, $monedaConvertir, $monto), 5);
+
+        $resultado =  $monto . " " . $monedaActual . " es/son igual/es a " . $montoConvertido . " " . $monedaConvertir . ".";
         
-        echo $monto . " " . $monedaActual . " son iguales a " . $resultado . " " . $monedaConvertir . ".";
+        echo json_encode(["resultado" => $resultado]);
     }
 }

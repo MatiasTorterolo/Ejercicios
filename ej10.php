@@ -72,7 +72,8 @@ if($method === "POST") {
             <strong style='color: #FF7F7F;'>Obesidad I:</strong> 30.0 - 34.9 <br>
             <strong style='color: #FF4D4D;'>Obesidad II:</strong> 35.0 - 39.9 <br>
             <strong style='color: #800000;'>Obesidad III:</strong> Más de 39.9</p>
-            ";
+        ";
         
+        echo"<a href='index.php' class='btn btn-primary' style='text-decoration: none;'>🏠 Volver a la Página Principal</a>";
     }
 }

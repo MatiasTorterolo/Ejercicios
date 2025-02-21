@@ -2,38 +2,38 @@ document.addEventListener("DOMContentLoaded", function() {
    
     const form = document.querySelector(".exercise-form-conversion-measure");
         
-        const selectMedida = form.querySelector(".exercise-select");
-        const inputMetros = form.querySelector(".exercise-input");
-        const resultado = form.querySelector(".resultado-container");
-        const actionUrl = form.getAttribute("data-action");
-        const method = form.getAttribute("method");
+    const selectMedida = form.querySelector(".exercise-select");
+    const inputMetros = form.querySelector(".exercise-input");
+    const resultado = form.querySelector(".resultado-container");
+    const actionUrl = form.getAttribute("data-action");
+    const method = form.getAttribute("method");
 
-        form.addEventListener("submit", function(event) {
+    form.addEventListener("submit", function(event) {
            
-            event.preventDefault();
+        event.preventDefault();
             
-            let metros = inputMetros.value.trim();
-            let medida = selectMedida.value;
+        let metros = inputMetros.value.trim();
+        let medida = selectMedida.value;
             
-            fetch(actionUrl, {
-                method: method,
-                headers: {
-                    "Content-Type": "application/x-www-form-urlencoded"
-                },
-                body: "medida=" + encodeURIComponent(medida) + "&metros=" + encodeURIComponent(metros)
-            })
-            .then(response => response.json())
-            .then(data => {
+        fetch(actionUrl, {
+            method: method,
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            body: "medida=" + encodeURIComponent(medida) + "&metros=" + encodeURIComponent(metros)
+        })
+        .then(response => response.json())
+        .then(data => {
                 
-                if (data.resultado !== undefined) {
+            if (data.resultado !== undefined) {
                     
-                    resultado.innerText = data.resultado; 
-                } else {
+                resultado.innerText = data.resultado; 
+            } else {
                     
-                    resultado.innerText = "";
-                }
-            });
+                resultado.innerText = "";
+            }
         });
+    });
         
     inputMetros.addEventListener("input", function() {
 
