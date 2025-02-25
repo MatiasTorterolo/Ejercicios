@@ -14,7 +14,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
     <body>
         
         <nav class="navbar">
-            <div class="logo">Ejercicios Rubicom <3</div>
+            <div class="logo">Ejercicios</div>
             
             <select id="ejercicios" onchange="desplazarHaciaEjercicio()">
                 <option value="" disabled selected>Ejercicios</option> <!-- aca voy a tener que usar js para usar scrollIntoView() -->
